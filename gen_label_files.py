@@ -9,8 +9,8 @@ def main():
     for idx in data.index.to_list():
         row: pd.Series = data.iloc[idx]
         filename = row['filename'].replace(".jpg", ".txt")
-        x: list[int] = [row['xmin'], row['xmax']]
-        y: list[int] = [row['ymin'], row['ymax']]
+        x: tuple[int, int] = (row['xmin'], row['xmax'])
+        y: tuple[int, int] = (row['ymin'], row['ymax'])
         width = (x[1] - x[0]) / IMG_SIZE[0]
         height = (y[1] - y[0]) / IMG_SIZE[1]
         x_coord = round((x[1] + x[0]) / 2) / IMG_SIZE[0]
