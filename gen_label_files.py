@@ -1,7 +1,7 @@
 import pandas as pd
 
 PATH = "sar-dataset/labels/val"
-IMG_SIZE = (640, 480)
+IMG_SIZE = (1920, 1080)
 
 def main():
     data = pd.read_csv("base_val_dataset_labels.csv")

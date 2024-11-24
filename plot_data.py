@@ -18,8 +18,8 @@ if __name__ == "__main__":
     y: tuple[int, int] = (row['ymin'], row['ymax'])
     width = x[1] - x[0] #/ IMG_SIZE[0]
     height = y[1] - y[0] #/ IMG_SIZE[1]
-    x_coord = round((x[1] + x[0]) / 2)  #/ IMG_SIZE[0]
-    y_coord = round((y[1] + y[0]) / 2) #/ IMG_SIZE[1]
+    x_coord = x[0]  #/ IMG_SIZE[0]
+    y_coord = y[0] #/ IMG_SIZE[1]
 
     figure, axis = plt.subplots()
     rect = patches.Rectangle((x_coord, y_coord), width, height, linewidth=1, edgecolor='r', facecolor='none')
