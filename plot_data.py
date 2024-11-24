@@ -5,6 +5,8 @@ import numpy as np
 from matplotlib import patches
 
 IMG_SIZE = (1920, 1080)
+# Different x_coord calc strategy cuz PIL image plotting is different
+# Than ultralytics' standard
 
 if __name__ == "__main__":
     pic = np.array(Image.open("testing.jpg"))
